@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+<script src="https://use.fontawesome.com/926fe18a63.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<title>루이비통- 공식 온라인 스토어</title>
+</head>
+
+<body>
+    <!-- 헤더 -->
+    <header  id="stickymenu">
+        <div class="container" >
+            <div class="container-small" id="smallmenu">
+                <!-- 메뉴 토글 버튼 -->
+                <button type="button" class="headbutton" id="menubtn">
+                    <span class="fa fa-bars" title="MENU"></span>
+                </button>
+                <button type="button" class="headbutton">
+                    <span class="fa fa-heart"></span>
+                </button>
+
+                <a href="index.html" class="headname">LOUIS VUITTON</a>
+
+                <button type="button" class="headbutton" id="login2">
+                    <span class="fa fa-user"></span>
+                </button>
+                <button type="button" class="headbutton">
+                    <span class="fa fa-shopping-bag"></span>
+                </button>
+            </div>
+
+            <!-- 내비게이션 메뉴 -->
+            <nav class="navmenu">
+                <ul>
+                    <li><a href="#">WHAT'S NEW</a></li>
+                    <li><a href="#">여성</a></li>
+                    <li><a href="#">남성</a></li>
+                    <li><a href="#">라이프 스타일</a></li>
+                    <li><a href="#" id="login">LOGIN</a></li>
+                </ul>
+            </nav>
+            <div class="search">
+                <input type="search" class="searchbar" placeholder="'앙프렝뜨'를 검색해보세요!">
+            </div>
+        </div>
+    </header>
+
+        <!-- The Modal -->
+    <div id="id01" class="modal">
+
+        <!-- Form : 이 위치에 form 을 넣습니다 -->	
+        <form class="modal-content animate" action="https://www.w3schools.com/action_page.php" method="post">
+        <div class="imgcontainer">
+            <!-- 닫기버튼  -->
+            <span class="close" 
+                onclick="document.getElementById('id01').style.display='none'">
+                &times
+            </span>
+            
+        </div>
+        
+        <div class="logincontainer">
+            <!-- 로그인 form -->
+            <label for="uname"><b>Username</b></label>
+            <input type="text" name="uname" placeholder="Enter Usaername" required>
+
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+
+            <button type="submit" id="loginbtn">Login</button>
+            <label>
+                <input type="checkbox" checked="checked" name="remember"/>	
+                Remember Me
+            </label>
+
+        </div>
+        
+        <div class="container" style="background-color:#f1f1f1">
+            <!-- 취소 버튼 -->
+            <button type="button" class="cancelbtn"
+                onclick="document.getElementById('id01').style.display='none'">Cancel</button>
+            <!-- 다른 로그인 방식 -->
+            <button type="button" class="cancelbtn" id="socallogin" onclick="location.href='social_login.html'">소셜 로그인 방식으로 로그인하기</button>
+                <!-- 비밀번호 잊으셨나요? -->
+            <span class="psw">Forgot <a href="#">password?</a></span>
+        </div>
+        </form>
+
+    </div>
+
+    <script>
+
+        var modal = document.getElementById('id01');
+        
+        window.onclick = function(event){
+            if(event.target == modal){
+                modal.style.display="none";
+            }
+        }
+        
+        
+    </script>
+
+    <!-- 컨텐츠 B-->
+
+    <div class="clear"></div>
+
+    <section class="conB">
+        <div class="container">
+            <div id="myCarousel" class="carousel slide carousel-fade" data-interval="false">
+
+                
+                <!-- The slideshow -->
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="img/LOUISMAN.webp" id="img_small" class="man_img" alt="LOUISMAN">
+                        <img src="img/LOUISMAN_big1.webp" id="img_big1" class="man_img" alt="">
+                        <img src="img/LOUISMAN_big2.webp" id="img_big2" class="man_img" alt="">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/LOUISWOMAN.jpg" id="img_small" class="man_img" alt="LOUISWOMAN">
+                        <img src="img/LOUISWOMAN_big1.webp" id="img_big1" class="man_img" alt="">
+                        <img src="img/LOUISWOMAN_big2.jpg" id="img_big2" class="man_img" alt="">
+                    </div>
+                    <!-- Indicators -->
+                    <ul class="carousel-indicators">
+                      <li class="item1 active"></li>
+                      <li class="item2"></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="text1" id="fronttext">
+                <h5>다미에 그라파이트 자이언트 컬렉션</h5>
+                <p>오직 온라인 스토어에서만 먼저 공개하는 아이템을 확인하세요</p>
+            </div>
+            <div class="main_B">
+                <button type="button" class="main_button_1" id="button1">컬렉션보기</button>
+                <button type="button" class="main_button_2" id="button2">스토리보기</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 컨텐츠 C -->
+    <section class="conC">
+        <div class="container">
+            <hr id="hr1">
+            <div>
+                <img src="img/pic3.webp" id="img_small" class="pic3" alt="LOUISMAN">
+                <img src="img/pic3_big1.webp" id="img_big1" class="pic3" alt="LOUISMAN">
+                <img src="img/pic3_big2.webp" id="img_big2" class="pic3" alt="LOUISMAN">
+
+            </div>
+
+            <div class="text3">
+                <h5>미니 앙프렝뜨 크로스 백</h5>
+                <p>클래식한 햇박스의 재해석</p>
+            </div>
+        </div>
+        <hr id="hr1">
+    </section>
+
+    <!-- 컨텐츠 D -->
+    <section class="conD">
+        <div class="container">
+            <div class="text4">
+                <h5>그녀를 위한 선물 제안</h5>
+                <p>감동을 전해 줄 선물 아이템을 미리 만나보세요</p>
+            </div>
+
+            <div class="main_B">
+                <button type="button" class="main_button_3">자세히보기</button>
+            </div>
+        </div>
+        <hr>
+    </section>
+    
+    <!-- 컨텐츠 E-->
+    <section class="conE">
+        <div class="container">
+            <div>
+                <img src="img/pic4.webp" id="img_small" class="pic4" alt="">
+                <img src="img/pic4_big1.webp" id="img_big1" class="pic4" alt="">
+                <img src="img/pic4_big1.webp" id="img_big2" class="pic4" alt="">
+
+                
+            </div>
+
+            <div class="text5">
+                <h5>앙프렝뜨 데일리 백팩</h5>
+                <p>일상과 여행을 어우르는 세련됨</p>
+            </div>
+
+            <div class="main_B">
+                <button type="button" class="main_button_3">자세히보기</button>
+            </div>
+        </div>
+        <hr id="hr2">
+    </section>
+
+    <!-- 컨텐츠 F-->
+    <section class="conF">
+        <div class="container">
+            <div>
+                <img src="img/pic5.webp" class="pic5" alt="">
+            </div>
+
+            <div class="text6">
+                <h5>가을 앵클 부츠 & 부티</h5>
+                <p>록 스타일링 1</p>
+            </div>
+            <hr>
+        </div>
+    </section>
+
+    <!-- 컨텐츠 G -->
+    <section class="conG">
+        <div class="container">
+            <div>
+                <img src="img/pic6.webp" class="pic6" alt="">
+            </div>
+
+            <div class="text7">
+                <h5>셔츠 & 블라우스</h5>
+                <p>룩 스타일링 2</p>
+            </div>
+            <hr>
+        </div>
+    </section>
+
+    <!-- 컨텐츠 H -->
+    <section class="conH">
+        <div class="container">
+            <div>
+                <img src="img/pic7.webp" class="pic7" alt="">
+            </div>
+
+            <div class="text8">
+                <h5>캐시미어 니트</h5>
+                <p>룩 스타일링 3</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- 푸터 -->
+    <footer>
+        <div class="container">
+            <div class="footA">
+                <h2>LOUIS VUITTON</h2>
+            </div>
+            <hr color="gray">
+
+            <div class="footB">
+                <ul>
+                    <li><a href="#">뉴스 레터</a></li>
+                    <li><a href="#">고객지원</a></li>
+                    <li><a href="#">앱</a></li>
+                    <li><a href="#">소셜 미디어</a></li>
+                    <li><a href="#">개인정보처리방침</a></li>
+                </ul>
+            </div>
+
+            <div class="footC">
+                <ul>
+                    <li><a href="#">이용약관 및 법적고지</a></li>
+                    <li><a href="#">채용 정보</a></li>
+                    <li><a href="#">사이트맵</a></li>
+                </ul>
+            </div>
+
+            <div class="footD">
+                <p>루이비통코리아(유)｜대표이사: 안토니마이클패트릭르드루
+                    서울시 강남구 삼성동 511 15층｜사업자등록번호: 102-81-29113 사업자정보확인
+                    통신판매신고번호: 2015-서울강남-01689｜호스팅 서비스: 오렌지 비즈니스 서비스
+                    고객센터: 02-3432-1854｜FAX: 02-548-2696｜Email: korea@contact.louisvuitton.com</p>
+                <br>
+                <p>씨티은행 구매안전 서비스(채무지급보증)<br>
+                    고객님은 안전거래를 위해 현금 등으로 결제시 저희 쇼핑몰에서 가입한 씨티은행 구매안전서비스(지급보증서)를 이용하실 수 있습니다.</p>
+            </div>
+        </div>
+    </footer>
+    <script src = "LOUIS.js"></script>
+</body>
+</html>

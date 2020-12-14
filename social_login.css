@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+.banner {
+    padding-top: 100px;
+    /* background-color:pink; */
+    text-align: center;
+    font-size: 35px;
+}
+
+.banner a {
+    text-decoration: none;
+    color: black;
+
+}
+
+.naver{
+    /* background-color: red; */
+    text-align: center;
+    margin-top: 5%;
+}
+
+
